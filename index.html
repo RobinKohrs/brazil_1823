@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>brazil</title>
+<title>old_rio_3d</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
 <script src="./threejs/three.min.js"></script>
@@ -91,7 +91,6 @@
 <script>
 Q3D.Config.allVisible = true;
 Q3D.Config.bgColor = 0x000000;
-Q3D.Config.localMode = true;
 if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
 
 var app = Q3D.application,
@@ -100,7 +99,7 @@ var app = Q3D.application,
 app.init(container);           // initialize application
 
 // load the scene
-app.loadSceneFile("./data/index/scene.js", function () {
+app.loadSceneFile("./data/index/scene.json", function () {
   app.start();
 
   // North arrow inset
